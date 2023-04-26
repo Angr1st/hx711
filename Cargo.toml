@@ -1,6 +1,6 @@
 [package]
 name = "hx711"
-version = "0.7.0"
+version = "0.8.0"
 description = "A platform agnostic driver to interface with the HX711 (load cell amplifier and ADC)"
 authors = ["Jonas Hagen <jonas.hagen3@gmail.com>"]
 categories = ["embedded", "hardware-support", "no-std"]
@@ -12,8 +12,8 @@ license = "MIT OR Apache-2.0"
 never_type = []
 
 [dependencies]
-nb = "1.0.0"
+nb = "1.1.0"
 
 [dependencies.embedded-hal]
-version = "0.2.4"
+version = "0.2.7"
 features = ["unproven"]
