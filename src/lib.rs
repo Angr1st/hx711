@@ -13,9 +13,9 @@ extern crate embedded_hal as hal;
 
 extern crate nb;
 
-use hal::blocking::delay::DelayUs;
-use hal::digital::v2::InputPin;
-use hal::digital::v2::OutputPin;
+use hal::delay::DelayUs;
+use hal::digital::InputPin;
+use hal::digital::OutputPin;
 
 #[cfg(feature = "never_type")]
 use core::convert::Infallible;
@@ -79,7 +79,7 @@ impl Into<!> for Error<Infallible, Infallible> {
 
 impl<D, IN, OUT, EIN, EOUT> Hx711<D, IN, OUT>
 where
-    D: DelayUs<u32>,
+    D: DelayUs,
     IN: InputPin<Error = EIN>,
     OUT: OutputPin<Error = EOUT>,
 {
